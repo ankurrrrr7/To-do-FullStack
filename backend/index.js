@@ -3,9 +3,10 @@ const app = express();
 const { todo } = require('./db');
 const { updateTodo } = require('./type');
 const { createTodo } = require('./type');
+const cors = require("cors");
 
 app.use(express.json());
-
+app.use(cors());
 
 app.post("/todo", async (req, res) => {
     const createPayload = req.body;
@@ -30,7 +31,7 @@ app.post("/todo", async (req, res) => {
 app.get("/todos", async (req, res) => {
     const todos = await todo.find({})
     res.json({
-        todos
+        todos:[]
     })
 })
 

@@ -9,10 +9,9 @@
   "author": "Ankur jha",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "mongoose": "^8.6.1",
-    "zod": "^3.23.8",
-    "type": "module"
+    "zod": "^3.23.8"
   }
-  
 }
